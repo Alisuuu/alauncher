@@ -1,0 +1,34 @@
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+RepoType: git
+Repo: https://github.com/Alisuuu/alauncher
+
+Builds:
+  - versionName: 1.2
+    versionCode: 3
+    commit: 3bcfbc4
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/alisu.keystore
+
+ArchiveType: APK
+Name: Alauncher
+Description: >-
+  Alauncher is a minimalist Android launcher with neon and futuristic themes.
+  Features include fluid gesture navigation, full widget support, icon pack
+  management with monochromatic tinting, music player widget via MediaSession,
+  weather display, customizable clock styles, drag and drop organization,
+  double tap to sleep, global search, and tablet support. Material Design
+  with smooth animations. Lightweight and fast. No ads, no tracking.
+Website: https://github.com/Alisuuu/alauncher
+SourceCode: https://github.com/Alisuuu/alauncher
+IssueTracker: https://github.com/Alisuuu/alauncher/issues
+Changelog: https://raw.githubusercontent.com/Alisuuu/alauncher/main/fastlane/metadata/android/en-US/changelogs/%c.txt
+License: GPL-3.0-only
+Categories:
+  - Launcher
+  - Theming
+  - Graphical
+  - Internet
