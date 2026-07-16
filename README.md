@@ -65,11 +65,7 @@ A clean, futuristic launcher with dynamic neon themes, fluid gestures and full w
 
 Create and share custom themes at **[alauncher.netlify.app](https://alauncher.netlify.app/)**
 
-<div align="center">
 
-![Theme Store](fastlane/metadata/android/en-US/images/featureGraphic.png)
-
-</div>
 
 - Build themes from scratch with the online editor
 - Import themes directly into Alauncher
@@ -102,15 +98,7 @@ The APK will be generated in `app/build/outputs/apk/`
 
 ---
 
-## Installing from F-Droid
 
-Alauncher is available on F-Droid for automatic updates.
-
-<a href="https://f-droid.org/packages/com.alisu.alauncher/">
-<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/>
-</a>
-
----
 
 ## License
 
