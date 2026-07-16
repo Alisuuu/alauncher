@@ -81,5 +81,9 @@ theme-store/
 Thumbs.db
 
 # Python
+*.py
 __pycache__/
 *.pyc
+
+# Opencode
+opencode.json
