@@ -73,9 +73,8 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 
-# Node.js (theme-store)
-theme-store/node_modules/
-theme-store/package-lock.json
+# Theme Store
+theme-store/
 
 # OS files
 .DS_Store

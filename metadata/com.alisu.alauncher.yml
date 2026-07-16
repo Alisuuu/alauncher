@@ -22,7 +22,7 @@ Description: >-
   weather display, customizable clock styles, drag and drop organization,
   double tap to sleep, global search, and tablet support. Material Design
   with smooth animations. Lightweight and fast. No ads, no tracking.
-Website: https://github.com/Alisuuu/alauncher
+Website: https://alauncher.netlify.app/
 SourceCode: https://github.com/Alisuuu/alauncher
 IssueTracker: https://github.com/Alisuuu/alauncher/issues
 Changelog: https://raw.githubusercontent.com/Alisuuu/alauncher/main/fastlane/metadata/android/en-US/changelogs/%c.txt

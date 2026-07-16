@@ -16,4 +16,6 @@ Features:
 • Material Design with smooth animations
 • Lightweight and fast
 
+Create your own themes from scratch at https://alauncher.netlify.app/
+
 Alauncher respects your privacy. No ads, no tracking, no data collection. Fully open source under GPL-3.0 license.

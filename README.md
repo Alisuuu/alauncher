@@ -46,6 +46,14 @@ cd alauncher
 - JDK 17
 - Android SDK 35
 
+## Theme Store
+
+Create and share custom themes at **[alauncher.netlify.app](https://alauncher.netlify.app/)**
+
+- Build themes from scratch with the online editor
+- Import themes directly into Alauncher
+- Browse and download community themes
+
 ## Installing from F-Droid
 
 Alauncher is available on F-Droid. You can install it from there for automatic updates.
