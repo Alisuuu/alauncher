@@ -20,11 +20,9 @@ A minimalist Android launcher with neon themes, fluid gestures and full widget s
 
 ## Screenshots
 
-> Add your screenshots to `fastlane/metadata/android/en-US/images/phoneScreenshots/`
-
-| Home Screen | App Drawer | Settings |
-|:-----------:|:----------:|:--------:|
-| ![Home](fastlane/metadata/android/en-US/images/phoneScreenshots/1.png) | ![Drawer](fastlane/metadata/android/en-US/images/phoneScreenshots/2.png) | ![Settings](fastlane/metadata/android/en-US/images/phoneScreenshots/3.png) |
+| Home Screen | App Drawer | Widgets | Settings |
+|:-----------:|:----------:|:-------:|:--------:|
+| ![Home](fastlane/metadata/android/en-US/images/phoneScreenshots/1.png) | ![Drawer](fastlane/metadata/android/en-US/images/phoneScreenshots/2.png) | ![Widgets](fastlane/metadata/android/en-US/images/phoneScreenshots/3.png) | ![Settings](fastlane/metadata/android/en-US/images/phoneScreenshots/4.png) |
 
 ## Building
 
