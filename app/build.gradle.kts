@@ -8,15 +8,6 @@ android {
     namespace = "com.alisu.alauncher"
     compileSdk = 35
 
-    signingConfigs {
-        create("release") {
-            storeFile = file("alisu.keystore")
-            storePassword = "alisu123"
-            keyAlias = "alisu"
-            keyPassword = "alisu123"
-        }
-    }
-
     defaultConfig {
         applicationId = "com.alisu.alauncher"
         minSdk = 26
@@ -31,7 +22,7 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            signingConfig = signingConfigs.getByName("release")
+
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -42,10 +33,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlin {
-        jvmToolchain(17)
     }
 
     buildFeatures {
@@ -71,7 +58,9 @@ dependencies {
     implementation("com.ernestoyaquello.dragdropswiperecyclerview:drag-drop-swipe-recyclerview:1.2.0")
 
     implementation("androidx.dynamicanimation:dynamicanimation:1.0.0")
+
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
+
     implementation(libs.androidx.profileinstaller)
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.kotlinx.serialization.json)
