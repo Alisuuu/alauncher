@@ -6,7 +6,7 @@ Repo: https://github.com/Alisuuu/alauncher
 Builds:
   - versionName: 1.2
     versionCode: 3
-    commit: 3bcfbc4
+    commit: 3c9130e
     subdir: app
     gradle:
       - yes
