@@ -1,10 +1,37 @@
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+Categories:
+  - Theming
+  - System
+
+License: GPL-3.0-only
+
+AuthorName: Alisuuu
+
+Name: Alauncher
+Summary: Minimalist Android launcher with futuristic themes
+
+Description: >-
+  Alauncher is a minimalist Android launcher with neon and futuristic themes.
+  Features include gesture navigation, widget support, icon pack management
+  with monochromatic tinting, music player widget via MediaSession, weather
+  display, customizable clock styles, drag and drop organization, double tap
+  to sleep, global search, and tablet support. Material Design with smooth
+  animations. Lightweight and fast. No ads, no tracking.
+
 RepoType: git
 Repo: https://github.com/Alisuuu/alauncher
 
+SourceCode: https://github.com/Alisuuu/alauncher
+IssueTracker: https://github.com/Alisuuu/alauncher/issues
+Changelog: https://raw.githubusercontent.com/Alisuuu/alauncher/main/fastlane/metadata/android/en-US/changelogs/%c.txt
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+
+CurrentVersion: "1.2"
+CurrentVersionCode: 3
+
 Builds:
-  - versionName: 1.2
+  - versionName: "1.2"
     versionCode: 3
     commit: 3c9130e
     subdir: app
@@ -12,23 +39,3 @@ Builds:
       - yes
     rm:
       - app/alisu.keystore
-
-ArchiveType: APK
-Name: Alauncher
-Description: >-
-  Alauncher is a minimalist Android launcher with neon and futuristic themes.
-  Features include fluid gesture navigation, full widget support, icon pack
-  management with monochromatic tinting, music player widget via MediaSession,
-  weather display, customizable clock styles, drag and drop organization,
-  double tap to sleep, global search, and tablet support. Material Design
-  with smooth animations. Lightweight and fast. No ads, no tracking.
-Website: https://alauncher.netlify.app/
-SourceCode: https://github.com/Alisuuu/alauncher
-IssueTracker: https://github.com/Alisuuu/alauncher/issues
-Changelog: https://raw.githubusercontent.com/Alisuuu/alauncher/main/fastlane/metadata/android/en-US/changelogs/%c.txt
-License: GPL-3.0-only
-Categories:
-  - Launcher
-  - Theming
-  - Graphical
-  - Internet
