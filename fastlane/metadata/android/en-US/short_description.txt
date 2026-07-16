@@ -1,0 +1,1 @@
+Minimalist Android launcher with neon themes, fluid gestures and full widget support

@@ -1,0 +1,19 @@
+Alauncher is a modern, minimalist Android launcher designed for users who want a clean and futuristic home screen experience.
+
+Features:
+• Dynamic neon and minimalist themes with full customization
+• Orbital and standard app drawer styles
+• Full support for native Android widgets
+• Fluid gestures for search, notifications and app drawer
+• Icon pack support with monochromatic icon tinting
+• Music player widget with MediaSession integration
+• Weather display on the home screen
+• Customizable clock styles (digital, analog, strip)
+• Drag and drop to organize apps and create folders
+• Double tap to sleep
+• Global search with app and contact results
+• Tablet and landscape mode support
+• Material Design with smooth animations
+• Lightweight and fast
+
+Alauncher respects your privacy. No ads, no tracking, no data collection. Fully open source under GPL-3.0 license.

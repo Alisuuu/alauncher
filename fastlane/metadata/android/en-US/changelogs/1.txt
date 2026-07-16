@@ -1,0 +1,7 @@
+• Initial release on F-Droid
+• Neon and minimalist theme system
+• Widget support (clock, music, notes, Android widgets)
+• Gesture navigation
+• Icon pack support
+• Folder management
+• Drag and drop organization

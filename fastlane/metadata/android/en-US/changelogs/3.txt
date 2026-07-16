@@ -1,0 +1,6 @@
+• Improved theme system with dynamic color support
+• Added icon pack manager with monochromatic tinting
+• New orbital app drawer style
+• Music widget with queue management
+• Weather integration on home screen
+• Performance improvements and bug fixes
