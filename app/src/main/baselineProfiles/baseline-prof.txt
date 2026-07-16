@@ -1,0 +1,124 @@
+# Alauncher Baseline Profile
+# Pre-compila caminhos críticos: lançamento da Home, retorno de apps, interação inicial
+
+# Entry points (classes)
+Lcom/alisu/alauncher/AlauncherApplication;
+Lcom/alisu/alauncher/MainActivity;
+Lcom/alisu/alauncher/SettingsActivity;
+Lcom/alisu/alauncher/PermissionsActivity;
+
+# onResume / onNewIntent (chamados ao voltar pra home)
+HSPLcom/alisu/alauncher/MainActivity;->onResume()V
+HSPLcom/alisu/alauncher/MainActivity;->onNewIntent(Landroid/content/Intent;)V
+HSPLcom/alisu/alauncher/MainActivity;->navigateToPage(I)V
+HSPLcom/alisu/alauncher/MainActivity;->applyTheme(Lcom/alisu/alauncher/theme/AppTheme;)V
+HSPLcom/alisu/alauncher/MainActivity;->setupDockAppsGrid()V
+HSPLcom/alisu/alauncher/MainActivity;->refreshDesktopGrid()V
+HSPLcom/alisu/alauncher/MainActivity;->setupHomeDesktop(Landroid/view/View;)V
+HSPLcom/alisu/alauncher/MainActivity;->loadHomeAppsPackages()V
+HSPLcom/alisu/alauncher/MainActivity;->loadDockAppsPackages()V
+HSPLcom/alisu/alauncher/MainActivity;->getDesktopAppsList(Ljava/util/List;Lcom/alisu/alauncher/theme/AppTheme;)Ljava/util/List;
+HSPLcom/alisu/alauncher/MainActivity;->fetchWeatherData()V
+HSPLcom/alisu/alauncher/MainActivity;->loadAndSetupApps()V
+HSPLcom/alisu/alauncher/MainActivity;->updateDesktopClockAndMascot(Landroid/view/View;Lcom/alisu/alauncher/theme/AppTheme;)V
+HSPLcom/alisu/alauncher/MainActivity;->isDefaultLauncher()Z
+
+# Theme system
+Lcom/alisu/alauncher/theme/ThemeManager;
+Lcom/alisu/alauncher/theme/ThemeModel;
+Lcom/alisu/alauncher/theme/ThemeDrawableLoader;
+
+# AppAdapter: bind (metodo mais pesado, executado por icone)
+Lcom/alisu/alauncher/ui/AppAdapter;
+Lcom/alisu/alauncher/ui/AppAdapter$AppViewHolder;
+HSPLcom/alisu/alauncher/ui/AppAdapter$AppViewHolder;->bind(Lcom/alisu/alauncher/model/AppInfo;Lcom/alisu/alauncher/theme/AppTheme;ZZLkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lcom/alisu/alauncher/gesture/GestureController;Lcom/alisu/alauncher/ui/AppAdapter;I)V
+HSPLcom/alisu/alauncher/ui/AppAdapter$AppViewHolder;->setupFolderPreview(Landroid/widget/FrameLayout;Ljava/util/List;ZLcom/alisu/alauncher/theme/AppTheme;Lcom/alisu/alauncher/ui/AppAdapter;)V
+HSPLcom/alisu/alauncher/ui/AppAdapter;->ensurePrefsCached(Landroid/content/Context;)V
+HSPLcom/alisu/alauncher/ui/AppAdapter;->clearPrefsCache()V
+HSPLcom/alisu/alauncher/ui/AppAdapter;->updateData(Ljava/util/List;)V
+
+# Home screen rendering
+Lcom/alisu/alauncher/ui/HomePagerAdapter;
+Lcom/alisu/alauncher/ui/ShapeClippingTransformation;
+Lcom/alisu/alauncher/ui/MonochromaticTransformation;
+Lcom/alisu/alauncher/ui/OrbitDrawerView;
+Lcom/alisu/alauncher/workspace/WorkspaceLayout;
+Lcom/alisu/alauncher/workspace/CellPosition;
+Lcom/alisu/alauncher/dock/DockLayout;
+
+# AppIconFetcher: fetch de icone via Coil
+Lcom/alisu/alauncher/launcher/AppIconFetcher;
+HSPLcom/alisu/alauncher/launcher/AppIconFetcher;->fetch()Lcoil/fetch/FetchResult;
+HSPLcom/alisu/alauncher/launcher/AppIconFetcher;->drawableToBitmap(Landroid/graphics/drawable/Drawable;IILjava/lang/String;)Landroid/graphics/Bitmap;
+Lcom/alisu/alauncher/launcher/AppIconFetcher$Factory;
+HSPLcom/alisu/alauncher/launcher/AppIconFetcher$Factory;->create(Landroid/net/Uri;Lcoil/request/Options;Lcoil/ImageLoader;)Lcoil/fetch/Fetcher;
+
+# App loading & icons
+Lcom/alisu/alauncher/launcher/AppLoader;
+HSPLcom/alisu/alauncher/launcher/AppLoader;->loadInstalledApps(Landroid/content/Context;)Ljava/util/List;
+HSPLcom/alisu/alauncher/launcher/AppLoader;->loadAppsForPackages(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
+Lcom/alisu/alauncher/launcher/IconPackManager;
+HSPLcom/alisu/alauncher/launcher/IconPackManager;->loadIconPack(Landroid/content/Context;Ljava/lang/String;)V
+HSPLcom/alisu/alauncher/launcher/IconPackManager;->getIcon(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+HSPLcom/alisu/alauncher/launcher/IconPackManager;->getRawIcon(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+Lcom/alisu/alauncher/model/AppInfo;
+
+# Gesture handling
+Lcom/alisu/alauncher/gesture/GestureController;
+Lcom/alisu/alauncher/gesture/LawnchairGestureController;
+Lcom/alisu/alauncher/gesture/SwipeDetector;
+Lcom/alisu/alauncher/gesture/TouchState;
+Lcom/alisu/alauncher/gesture/GestureHandler;
+Lcom/alisu/alauncher/gesture/AllAppsSwipeController;
+Lcom/alisu/alauncher/gesture/OpenAppDrawerHandler;
+Lcom/alisu/alauncher/gesture/OpenSearchHandler;
+Lcom/alisu/alauncher/gesture/OpenNotificationsHandler;
+Lcom/alisu/alauncher/gesture/SleepHandler;
+Lcom/alisu/alauncher/gesture/CheckLongPressHelper;
+Lcom/alisu/alauncher/gesture/EdgeEffectHelper;
+Lcom/alisu/alauncher/gesture/SmoothScroller;
+
+# Drag & drop
+Lcom/alisu/alauncher/drag/DragController;
+Lcom/alisu/alauncher/drag/DragLayer;
+Lcom/alisu/alauncher/drag/DropTarget;
+
+# Popup menus
+Lcom/alisu/alauncher/popup/PopupController;
+
+# Widgets
+Lcom/alisu/alauncher/widget/WidgetHostProvider;
+Lcom/alisu/alauncher/widget/WidgetSizeCalculator;
+Lcom/alisu/alauncher/widget/WidgetPreviewLoader;
+Lcom/alisu/alauncher/widget/PendingWidgetHostView;
+
+# Media player & clock
+Lcom/alisu/alauncher/MediaPlayerExtKt;
+Lcom/alisu/alauncher/ClockStylesExtKt;
+Lcom/alisu/alauncher/MediaNotificationListener;
+
+# Utilitarios
+Lcom/alisu/alauncher/util/FirstFrameAnimatorHelper;
+Lcom/alisu/alauncher/util/ViewCache;
+Lcom/alisu/alauncher/util/BackgroundViewPool;
+Lcom/alisu/alauncher/util/HapticUtil;
+Lcom/alisu/alauncher/util/SpringAnimationBuilder;
+
+# Framework / AndroidX (hot paths no retorno a home)
+Landroidx/recyclerview/widget/RecyclerView;
+Landroidx/recyclerview/widget/GridLayoutManager;
+Landroidx/recyclerview/widget/DiffUtil;
+HSPLandroidx/recyclerview/widget/DiffUtil;->calculateDiff(Landroidx/recyclerview/widget/DiffUtil$Callback;)Landroidx/recyclerview/widget/DiffUtil$DiffResult;
+Landroid/content/SharedPreferences;
+HSPLandroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+HSPLandroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+HSPLandroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+Landroid/graphics/drawable/GradientDrawable;
+Landroid/graphics/drawable/RippleDrawable;
+Landroid/view/ViewOutlineProvider;
+HSPLandroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+Lkotlinx/coroutines/Dispatchers;
+Lkotlinx/coroutines/withContext;
+Lcoil/Coil;
+Lcoil/ImageLoader;
+Lcoil/request/ImageRequest$Builder;

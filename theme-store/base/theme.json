@@ -1,0 +1,29 @@
+{
+  "name": "Project CrossS",
+  "id": "base",
+  "author": "Alauncher",
+  "description": "Default dark theme with clean modern design",
+  "wallpaperPath": "themes/base/wallpaper.jpg",
+  "cardXmlPath": "texture.xml",
+  "cardTexture": "grid",
+  "characterPath": "themes/base/character.png",
+  "symbolPath": "themes/base/symbol.png",
+  "useCardTexture": true,
+  "colors": {
+    "background": "#06060A",
+    "surface": "#0E0E14",
+    "primary": "#FFFFFF",
+    "textPrimary": "#FFFFFF",
+    "textSecondary": "#A0A0B0",
+    "glowColor": "#FFFFFF"
+  },
+  "shapes": {
+    "cardCornerRadius": 16,
+    "searchBarCornerRadius": 28,
+    "showBorders": true
+  },
+  "layout": {
+    "columns": 4,
+    "showAppName": true
+  }
+}

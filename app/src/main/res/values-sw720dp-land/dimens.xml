@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 10" Tablet Landscape dimensions -->
+    <dimen name="desktop_margin_top">0dp</dimen>
+    <dimen name="desktop_margin_bottom">12dp</dimen>
+    <dimen name="desktop_padding_left_right">24dp</dimen>
+
+    <dimen name="clock_margin_top">0dp</dimen>
+    <dimen name="clock_margin_bottom">4dp</dimen>
+    <dimen name="clock_text_size">40sp</dimen>
+    <dimen name="clock_date_text_size">12sp</dimen>
+    <dimen name="mascot_size">40dp</dimen>
+
+    <dimen name="dock_margin_bottom">10dp</dimen>
+    <dimen name="dock_padding_top_bottom">10dp</dimen>
+
+    <!-- App Drawer sizes -->
+    <dimen name="app_drawer_padding">120dp</dimen>
+    <dimen name="page_indicator_margin_bottom">70dp</dimen>
+</resources>

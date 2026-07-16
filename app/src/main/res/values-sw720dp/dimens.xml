@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 10" Tablet Portrait dimensions -->
+    <dimen name="desktop_margin_top">0dp</dimen>
+    <dimen name="desktop_margin_bottom">32dp</dimen>
+    <dimen name="desktop_padding_left_right">48dp</dimen>
+
+    <dimen name="clock_margin_top">0dp</dimen>
+    <dimen name="clock_margin_bottom">0dp</dimen>
+    <dimen name="clock_text_size">72sp</dimen>
+    <dimen name="clock_date_text_size">16sp</dimen>
+    <dimen name="mascot_size">68dp</dimen>
+
+    <dimen name="dock_margin_bottom">20dp</dimen>
+    <dimen name="dock_padding_top_bottom">14dp</dimen>
+
+    <!-- App Drawer sizes -->
+    <dimen name="app_drawer_padding">64dp</dimen>
+    <dimen name="page_indicator_margin_bottom">110dp</dimen>
+</resources>

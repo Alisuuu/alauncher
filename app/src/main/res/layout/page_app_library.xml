@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CC0E0E12"
+    android:paddingStart="@dimen/app_drawer_padding"
+    android:paddingEnd="@dimen/app_drawer_padding">
+
+    <View
+        android:id="@+id/drag_handle_library"
+        android:layout_width="80dp"
+        android:layout_height="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_drag_handle" />
+
+    <!-- Barra de Pesquisa da Biblioteca -->
+    <LinearLayout
+        android:id="@+id/ll_library_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <EditText
+            android:id="@+id/et_library_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/library_search_hint"
+            android:textColorHint="#99CCCCCC"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/iv_library_clear_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="Clear search"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_library_search_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_search"
+            android:contentDescription="Search" />
+
+    </LinearLayout>
+
+    <!-- Grid Principal de Apps da Biblioteca (Todos os Apps) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_library_apps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

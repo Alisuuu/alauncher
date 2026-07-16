@@ -1,0 +1,27 @@
+{
+  "name": "Manta ray",
+  "id": "mantaray",
+  "wallpaperPath": "wallpaper.jpg",
+  "cardXmlPath": "texture.xml",
+  "cardTexture": "dots",
+  "characterPath": "character.png",
+  "symbolPath": "symbol.jpg",
+  "useCardTexture": true,
+  "colors": {
+    "background": "#0B0E1F",
+    "surface": "#1A1630",
+    "primary": "#FF69C7",
+    "textPrimary": "#FFF7FF",
+    "textSecondary": "#CBB8FF",
+    "glowColor": "#A855F7"
+  },
+  "shapes": {
+    "cardCornerRadius": 14,
+    "searchBarCornerRadius": 24,
+    "showBorders": true
+  },
+  "layout": {
+    "columns": 4,
+    "showAppName": true
+  }
+}

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Wallpaper Dinâmico -->
+    <ImageView
+        android:id="@+id/iv_wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Wallpaper"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Overlay escuro para contraste -->
+    <View
+        android:id="@+id/view_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000" />
+
+    <!-- Container de páginas (Desktop, Gaveta, Widgets) -->
+    <FrameLayout
+        android:id="@+id/pages_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Indicador de Página (Pontos Minimalistas) -->
+    <LinearLayout
+        android:id="@+id/ll_page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/page_indicator_margin_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ================= PESQUISA GLOBAL OVERLAY ================= -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_global_search_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        tools:visibility="visible">
+
+        <!-- Fundo de Vidro Translúcido -->
+        <View
+            android:id="@+id/view_search_blur_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E60A0A0A" />
+
+        <!-- Barra de Busca Global -->
+        <LinearLayout
+            android:id="@+id/ll_global_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <EditText
+                android:id="@+id/et_global_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/global_search_hint"
+                android:textColorHint="#99CCCCCC"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <FrameLayout
+                android:id="@+id/btn_close_global_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_close"
+                    android:contentDescription="Close Search" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Grid de Resultados da Busca -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_global_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/ll_global_search_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_global_search_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_results"
+            android:textColor="#88FFFFFF"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/rv_global_search_results"
+            app:layout_constraintBottom_toBottomOf="@id/rv_global_search_results"
+            app:layout_constraintStart_toStartOf="@id/rv_global_search_results"
+            app:layout_constraintEnd_toEndOf="@id/rv_global_search_results" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ================= WELCOME OVERLAY ================= -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_welcome_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Fundo Translúcido Glassmorphic Escuro -->
+        <View
+            android:id="@+id/view_welcome_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F20A0A0A" />
+
+        <!-- Conteúdo Centralizado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Ícone do App -->
+            <ImageView
+                android:id="@+id/iv_welcome_logo"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_marginBottom="28dp"
+                android:contentDescription="Alauncher Logo" />
+
+            <!-- Nome do App -->
+            <TextView
+                android:id="@+id/tv_welcome_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alauncher"
+                android:textSize="32sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="48dp" />
+
+            <!-- Botão Configurar Padrão -->
+            <LinearLayout
+                android:id="@+id/btn_welcome_set_default"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/iv_welcome_default_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_settings"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_welcome_default_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_set_default"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- Botão Começar -->
+            <LinearLayout
+                android:id="@+id/btn_welcome_start"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tv_welcome_start_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_start"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Splash Transition Icon (AndroidX SplashScreen exit animation) -->
+    <ImageView
+        android:id="@+id/splash_transition_icon"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botão de Confirmação do Modo de Edição -->
+    <LinearLayout
+        android:id="@+id/ll_edit_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:minWidth="120dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bg_edit_confirm"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_edit_confirm_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_check"
+            android:contentDescription="Confirm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_confirm"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:contentDescription="Confirm edit" />
+
+    </LinearLayout>
+
+    <!--
+        DragLayer: Camada de drag — DEVE SER O ÚLTIMO FILHO para ter z-order máximo.
+        O ícone flutuante passará por cima de tudo (Dock, Workspace, overlays).
+        Gerenciada pelo DragController. Inicia GONE e fica VISIBLE apenas durante drags.
+    -->
+    <com.alisu.alauncher.drag.DragLayer
+        android:id="@+id/drag_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <!-- ================= FOLDER FULL-SCREEN OVERLAY ================= -->
+    <LinearLayout
+        android:id="@+id/cl_folder_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#CC0E0E12"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/drag_handle_folder"
+            android:layout_width="80dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_drag_handle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_folder_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/iv_folder_edit_name"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_palette"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_folder_apps"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

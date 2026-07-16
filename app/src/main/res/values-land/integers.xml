@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Landscape Grid configurations -->
+    <integer name="desktop_grid_columns">4</integer>
+    <integer name="desktop_grid_rows">5</integer>
+    <integer name="dock_grid_columns">6</integer>
+    <integer name="app_drawer_grid_columns">5</integer>
+</resources>

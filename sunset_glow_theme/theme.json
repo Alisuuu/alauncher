@@ -1,0 +1,27 @@
+{
+  "name": "artery",
+  "id": "artery",
+  "wallpaperPath": "wallpaper.jpg",
+  "cardXmlPath": "texture.xml",
+  "cardTexture": "dots",
+  "characterPath": "character.png",
+  "symbolPath": "symbol.png",
+  "useCardTexture": true,
+  "colors": {
+    "background": "#1A0A0A",
+    "surface": "#2A1515",
+    "primary": "#FF6B35",
+    "textPrimary": "#FFEEDD",
+    "textSecondary": "#CC8866",
+    "glowColor": "#FF6B35"
+  },
+  "shapes": {
+    "cardCornerRadius": 14,
+    "searchBarCornerRadius": 24,
+    "showBorders": true
+  },
+  "layout": {
+    "columns": 4,
+    "showAppName": true
+  }
+}

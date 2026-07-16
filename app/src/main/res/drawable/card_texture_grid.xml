@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Grade sutil de fundo -->
+    <path
+        android:pathData="M0,25L100,25 M0,50L100,50 M0,75L100,75 M25,0L25,100 M50,0L50,100 M75,0L75,100"
+        android:strokeWidth="0.4"
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.3" />
+    <!-- Pontos de interseção para dar um ar mais "tech" -->
+    <path
+        android:pathData="M25,25m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M50,25m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M75,25m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M25,50m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M50,50m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M75,50m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M25,75m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M50,75m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0
+                          M75,75m-0.8,0a0.8,0.8 0,1 1,1.6 0a0.8,0.8 0,1 1,-1.6 0"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.6" />
+</vector>

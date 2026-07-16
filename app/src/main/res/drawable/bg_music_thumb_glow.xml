@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Glow externo -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#40FF6D00"
+                android:endColor="#00FF6D00"
+                android:angle="135" />
+            <size
+                android:width="22dp"
+                android:height="22dp" />
+        </shape>
+    </item>
+    <!-- Ponto central -->
+    <item
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#FFFF6D00"
+                android:endColor="#FFFFAB00"
+                android:angle="135" />
+        </shape>
+    </item>
+</layer-list>

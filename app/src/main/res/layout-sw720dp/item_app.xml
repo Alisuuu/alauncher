@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Fundo/Textura do Card -->
+    <ImageView
+        android:id="@+id/iv_card_texture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
+    <!-- Container para bordas/efeitos -->
+    <View
+        android:id="@+id/fl_icon_container"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Ícone do App -->
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/fl_icon_container"
+        app:layout_constraintBottom_toBottomOf="@id/fl_icon_container"
+        app:layout_constraintStart_toStartOf="@id/fl_icon_container"
+        app:layout_constraintEnd_toEndOf="@id/fl_icon_container"
+        android:padding="3dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Icon" />
+
+    <!-- Botão de Deletar -->
+    <ImageView
+        android:id="@+id/btn_delete_app"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintTop_toTopOf="@id/fl_icon_container"
+        app:layout_constraintEnd_toEndOf="@id/fl_icon_container"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-4dp"
+        android:src="@drawable/ic_close"
+        android:background="@drawable/bg_circle_red"
+        android:padding="4dp"
+        android:visibility="gone"
+        app:tint="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Delete app" />
+
+    <!-- Nome do App -->
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fl_icon_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="App Name"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

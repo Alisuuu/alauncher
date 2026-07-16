@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Grid columns/rows default dimensions -->
+    <dimen name="desktop_margin_top">0dp</dimen>
+    <dimen name="desktop_margin_bottom">32dp</dimen>
+    <dimen name="desktop_padding_left_right">16dp</dimen>
+    
+    <dimen name="clock_margin_top">0dp</dimen>
+    <dimen name="clock_margin_bottom">0dp</dimen>
+    <dimen name="clock_text_size">50sp</dimen>
+    <dimen name="clock_date_text_size">12sp</dimen>
+    <dimen name="mascot_size">52dp</dimen>
+    
+    <dimen name="dock_margin_bottom">24dp</dimen>
+    <dimen name="dock_padding_top_bottom">16dp</dimen>
+
+    <!-- App Drawer sizes -->
+    <dimen name="app_drawer_padding">16dp</dimen>
+    <dimen name="page_indicator_margin_bottom">110dp</dimen>
+</resources>

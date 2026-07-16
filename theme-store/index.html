@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alauncher Theme Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="themes-root">
+        <img class="themes-wallpaper" id="wallpaper-bg" alt="">
+        <div class="themes-overlay"></div>
+
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="alauncher.png" alt="Alauncher" class="logo-img">
+                </div>
+                <div class="header-search">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" id="tmdb-search" placeholder="Search themes...">
+                </div>
+            </div>
+            <div class="header-categories">
+                <button class="category-btn active" data-category="trending">Popular</button>
+                <button class="category-btn" data-category="movies">Filmes</button>
+                <button class="category-btn" data-category="tv">Séries</button>
+                <button class="category-btn" data-category="anime">Anime</button>
+            </div>
+        </header>
+
+        <div class="themes-list">
+            <div class="tmdb-grid" id="tmdb-grid"></div>
+
+            <div class="tmdb-loading" id="tmdb-loading">
+                <div class="spinner"></div>
+                <span>Carregando...</span>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="create.html" class="fab-create" title="Criar Tema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+    </a>
+
+    <div class="modal" id="theme-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content theme-modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="theme-modal-body">
+                <div class="theme-modal-preview">
+                    <div class="preview-phone-container">
+                        <div class="preview-phone" id="modal-preview-phone">
+                            <div class="preview-notch"></div>
+                            <div class="preview-screen" id="modal-preview-screen"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="theme-modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-overview" class="theme-modal-overview"></p>
+                    
+                    <div class="theme-colors-preview" id="modal-colors"></div>
+                    
+                    <div class="backdrop-selector" id="modal-backdrops"></div>
+                    <div class="backdrop-selector" id="modal-posters"></div>
+                    <div class="backdrop-selector" id="modal-logos"></div>
+                    
+                    <div class="theme-modal-actions">
+                        <button class="btn btn-primary btn-large" id="btn-download-theme">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            Download Theme ZIP
+                        </button>
+                        <button class="btn btn-secondary btn-large" id="btn-customize-theme">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                            </svg>
+                            Customizar no Editor
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tmdb.js"></script>
+</body>
+</html>
