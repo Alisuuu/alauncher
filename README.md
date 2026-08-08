@@ -20,12 +20,8 @@ A clean, futuristic launcher with dynamic neon themes, fluid gestures and full w
 
 <div align="center">
 
-| | |
-|:---:|:---:|
-| **Home Screen** | **App Drawer** |
-| ![Home](fastlane/metadata/android/en-US/images/phoneScreenshots/1.png) | ![Drawer](fastlane/metadata/android/en-US/images/phoneScreenshots/2.png) |
-| **Widgets** | **Settings** |
-| ![Widgets](fastlane/metadata/android/en-US/images/phoneScreenshots/3.png) | ![Settings](fastlane/metadata/android/en-US/images/phoneScreenshots/4.png) |
+<img width="3464" height="3464" alt="333512" src="https://github.com/user-attachments/assets/e9d1234a-d17b-4721-8dbc-7d11393332b1" />
+
 
 </div>
 
